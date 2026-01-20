@@ -1,0 +1,53 @@
+# === .NET Core / Visual Studio ===
+bin/
+obj/
+out/
+*.dll
+*.exe
+*.app
+*.log
+*.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.pdb
+*.cache
+*.ide
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# === Node / React ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.tsbuildinfo
+
+# === SignalR / Misc ===
+*.db
+*.sqlite
+*.bak
+*.backup
+
+# === OS Generated Files ===
+.DS_Store
+Thumbs.db
+
+# === JetBrains / MacOS / Windows Files ===
+*.iml
+*.class
+*.orig
+*.swp
