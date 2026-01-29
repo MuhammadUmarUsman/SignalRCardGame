@@ -49,6 +49,40 @@
     border: 1px solid transparent;
 }
 
+.deck-count-badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: var(--accent-gold);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.score-badge {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background: var(--accent-gold);
+    color: var(--poker-dark);
+    font-size: 0.75rem;
+    font-weight: 800;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--bg-dark);
+    z-index: 20;
+    /* Higher than captured deck (5) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .room-id-badge:hover {
     background: rgba(0, 0, 0, 0.5);
     border-color: rgba(255, 255, 255, 0.1);
@@ -169,6 +203,8 @@
 }
 
 .player-avatar {
+    position: relative;
+    /* Ensure absolute children are positioned relative to this */
     width: 60px;
     height: 60px;
     background: var(--bg-dark);

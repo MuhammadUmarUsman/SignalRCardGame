@@ -7,8 +7,8 @@ const GameContext = createContext(null);
 
 export function GameProvider({ children }) {
   //const baseUrl = "https://localhost:7027";
-  //const baseUrl = "http://172.16.105.172:7027";
-  const baseUrl = "http://192.168.100.98:7027";
+  const baseUrl = "http://172.16.105.172:7027";
+  //const baseUrl = "http://192.168.100.98:7027";
   //const baseUrl = "http://192.168.18.196:7027";
   //const baseUrl = "https://hien-unpremature-nikia.ngrok-free.dev";
   const userId = useMemo(() => getOrCreateUserId(), []);

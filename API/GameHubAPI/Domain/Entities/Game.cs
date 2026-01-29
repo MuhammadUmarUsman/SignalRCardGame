@@ -6,6 +6,7 @@
         public List<Player> Players { get; set; } = new(); 
         public List<Card> TableCards { get; set; } = new();
         public Stack<Card> Deck { get; set; } = new();
+        public int DeckCount => Deck.Count;
         public int CurrentTurnIndex { get; set; }
         public bool IsStarted { get; set; } = false;
         public bool HasDrawnThisTurn { get; set; } = false;

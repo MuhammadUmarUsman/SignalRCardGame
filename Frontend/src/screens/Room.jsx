@@ -60,6 +60,7 @@ export default function Room() {
   const isEnded = game.IsEnded ?? game.isEnded ?? false;
   const currentTurnIndex = game.CurrentTurnIndex ?? game.currentTurnIndex ?? 0;
   const hostPlayerId = game.HostPlayerId ?? game.hostPlayerId;
+  const deckCount = game.DeckCount ?? game.deckCount ?? 0;
 
   const winnerIds = game.WinnerPlayerIds ?? game.winnerPlayerIds ?? [];
   const winningScore = game.WinningScore ?? game.winningScore ?? null;
@@ -389,6 +390,13 @@ export default function Room() {
               <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
             </svg>
           </div>
+          <div className="deck-count-badge" title="Cards remaining in deck">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+              <line x1="7" y1="2" x2="7" y2="22"></line>
+            </svg>
+            <span>{deckCount}</span>
+          </div>
         </div>
 
         <div className="header-right">
@@ -494,11 +502,15 @@ export default function Room() {
                       />
                     </div>
                   )}
+
+                  <div className="score-badge" title="Score">
+                    {score}
+                  </div>
                 </div>
 
-                {/* <div className="player-name">
-                  {p.PlayerName} <span className="player-score">({p.score})</span>
-                </div> */}
+                <div className="player-name">
+                  {p.PlayerName}
+                </div>
                 <div className="player-name">
                   {p.PlayerName}
                 </div>
