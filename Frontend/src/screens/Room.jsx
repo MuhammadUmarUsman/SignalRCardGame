@@ -503,9 +503,9 @@ export default function Room() {
                     </div>
                   )}
 
-                  <div className="score-badge" title="Score">
+                  {/* <div className="score-badge" title="Score">
                     {score}
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="player-name">
@@ -554,6 +554,7 @@ export default function Room() {
           canThrow={canThrow}
           selectedCard={selectedCard}
           onSelect={setSelectedCard}
+          onThrow={(card) => throwCard(gameId, card)}
         />
       </section>
 

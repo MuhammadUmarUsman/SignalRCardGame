@@ -19,7 +19,7 @@ const RANK_MAP = {
   13: "K"
 };
 
-export default function Card({ rank, suit, selectable, selected, dragging, onDragStart, onDragEnd, onClick }) {
+export default function Card({ rank, suit, selectable, selected, dragging, onDragStart, onDragEnd, onClick, onDoubleClick }) {
   const displayRank = RANK_MAP[rank] ?? rank;
   const symbol = SUIT_MAP[suit] ?? suit;
   const isRed = symbol === "♥" || symbol === "♦";
@@ -29,6 +29,7 @@ export default function Card({ rank, suit, selectable, selected, dragging, onDra
       className={`card ${isRed ? "red" : "black"} ${selectable ? "selectable" : ""
         } ${selected ? "selected" : ""} ${dragging ? "dragging" : ""}`}
       onClick={selectable ? onClick : undefined}
+      onDoubleClick={selectable ? onDoubleClick : undefined}
       onPointerDown={selectable && onDragStart ? (e) => onDragStart(e) : undefined}
       onPointerUp={selectable && onDragEnd ? (e) => onDragEnd(e) : undefined}
     >

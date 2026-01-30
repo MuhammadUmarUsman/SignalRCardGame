@@ -7,7 +7,8 @@ export default function PlayerHand({
   onSelect,
   draggingId,
   onDragStart,
-  onDragEnd
+  onDragEnd,
+  onThrow
 }) {
   return (
     <div className="player-hand-container">
@@ -44,6 +45,7 @@ export default function PlayerHand({
                 onDragStart={(e) => onDragStart && onDragStart(e, c)}
                 onDragEnd={onDragEnd}
                 onClick={() => onSelect(c)}
+                onDoubleClick={() => onThrow && onThrow(c)}
               />
             </div>
           );
